@@ -1,7 +1,7 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-const resolution = 20;
+const resolution = 10;
 canvas.width = 1200;
 canvas.height = 800;
 
@@ -9,11 +9,13 @@ const COLS = canvas.width / resolution;
 const ROWS = canvas.height / resolution;
 
 let grid = randomGrid();
+requestAnimationFrame(update);
 
-setInterval(() => {
+function update() {
     render(grid);
-    grid = JSON.parse(JSON.stringify(nextGen(grid)));
-}, 100);
+    grid = nextGen(grid);
+    requestAnimationFrame(update);
+}
 
 function getRandomNumberBetween(start, end) {
     return start + Math.floor(Math.random() * (end - start + 1));
