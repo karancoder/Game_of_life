@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    font-size: 2rem;
+    height: 4rem;
+}
+
+.footer {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    height: 3rem;
+}
+
+.footer,
+.header {
+    font-weight: bold;
+    color: #fff;
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.controller {
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controller div {
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    color: #282828;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #282828;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 1px 3px #282828;
+}
+
+.controller div:hover,
+.controller .active-btn {
+    background-color: #282828;
+    color: #fff;
+    transform: translateY(-1.5%);
+    box-shadow: 2px 2px 4px #282828;
+}
+
+.controller div:active {
+    transform: translateY(2.5%);
+    box-shadow: 2px 2px 4px #282828;
+}
+
+.canvas-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
